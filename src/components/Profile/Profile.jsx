@@ -5,6 +5,9 @@ import { Description } from './Description/Description';
 import { Avatar } from './Avatar/Avatar';
 import { UserName } from './UserName/UserName';
 import { UserInfo } from './UserInfo/UserInfo';
+import { StatisticList } from './StatisticList/StatisticList';
+import { StatisticItem } from './StatisticItem/StatisticItem';
+import { StatisticName } from './StatisticName/StatisticName';
 
 export function Profile({ user }) {
   const { username, tag, location, avatar, stats } = user;
@@ -13,24 +16,24 @@ export function Profile({ user }) {
       <Description>
         <Avatar src={avatar} alt="User avatar" />
         <UserName>{username}</UserName>
-        <UserInfo>{tag}</UserInfo>
+        <UserInfo>@{tag}</UserInfo>
         <UserInfo>{location}</UserInfo>
       </Description>
 
-      <ul>
-        <li>
-          <span>Followers</span>
+      <StatisticList>
+        <StatisticItem>
+          <StatisticName>Followers</StatisticName>
           <span>{stats.followers}</span>
-        </li>
-        <li>
-          <span>Views</span>
+        </StatisticItem>
+        <StatisticItem>
+          <StatisticName>Views</StatisticName>
           <span>{stats.views}</span>
-        </li>
-        <li>
-          <span>Likes</span>
+        </StatisticItem>
+        <StatisticItem>
+          <StatisticName>Likes</StatisticName>
           <span>{stats.likes}</span>
-        </li>
-      </ul>
+        </StatisticItem>
+      </StatisticList>
     </Card>
   );
 }

@@ -2,5 +2,7 @@ import { styled } from 'styled-components';
 
 export const Avatar = styled.img`
   border-color: red;
-  width: 100%;
+  max-width: 150px;
+  border-radius: 50%;
+  margin: 35px 0;
 `;

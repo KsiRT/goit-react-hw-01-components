@@ -1,12 +1,12 @@
 import { styled } from 'styled-components';
 
-export const Card = styled.div`
-  margin: 50px auto;
+export const StatisticItem = styled.li`
+  padding: 15px 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  outline: 2px solid gold;
-  width: 300px;
-  height: 450px;
+  border-top: 2px gold solid;
+  width: 34%;
+  background-color: #fff1a1;
 `;
