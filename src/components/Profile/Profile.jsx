@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card } from './Card/Card';
-import { Description } from './Description/Description';
-import { Avatar } from './Avatar/Avatar';
-import { UserName } from './UserName/UserName';
-import { UserInfo } from './UserInfo/UserInfo';
-import { StatisticList } from './StatisticList/StatisticList';
-import { StatisticItem } from './StatisticItem/StatisticItem';
-import { StatisticName } from './StatisticName/StatisticName';
+import {
+  Avatar,
+  Card,
+  Description,
+  StatisticItem,
+  StatisticList,
+  StatisticName,
+  UserInfo,
+  UserName,
+} from './ProfileStyled';
 
 export function Profile({ user }) {
   const { username, tag, location, avatar, stats } = user;

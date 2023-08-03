@@ -1,31 +1,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Container, List, StatLi, Title } from './StatStyled';
 
-export function Statistics({ data }) {
-  return data.map(object => {
-    <section class="statistics">
-      <h2 class="title">Upload stats</h2>
+export function Statistics({ data, title }) {
+  return (
+    <Container>
+      <Title>{title}</Title>
 
-      <ul class="stat-list">
-        <li class="item">
-          <span class="label">.docx</span>
-          <span class="percentage">4%</span>
-        </li>
-        <li class="item">
-          <span class="label">.mp3</span>
-          <span class="percentage">14%</span>
-        </li>
-        <li class="item">
-          <span class="label">.pdf</span>
-          <span class="percentage">41%</span>
-        </li>
-        <li class="item">
-          <span class="label">.mp4</span>
-          <span class="percentage">12%</span>
-        </li>
-      </ul>
-    </section>;
-  });
+      <List>
+        {data.map(object => {
+          return (
+            <StatLi key={object.id}>
+              <span>{object.label}</span>
+              <span>{object.percentage}%</span>
+            </StatLi>
+          );
+        })}
+      </List>
+    </Container>
+  );
 }
 
-Statistics.propTypes = {};
+Statistics.propTypes = {
+  title: PropTypes.string,
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
+};
