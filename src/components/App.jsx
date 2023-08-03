@@ -3,10 +3,10 @@ import { Statistics } from './Statistics/Statistics';
 import { Friends } from './Friends/Friends';
 
 import React from 'react';
-import user from '../assets/user.json';
-import data from '../assets/data.json';
-import friendList from '../assets/friends.json';
-import transactions from '../assets/transactions.json';
+import user from './assets/user.json';
+import data from './assets/data.json';
+import friendList from './assets/friends.json';
+import transactions from './assets/transactions.json';
 import 'modern-normalize';
 import { Transactions } from './Transactions/Transactions';
 
