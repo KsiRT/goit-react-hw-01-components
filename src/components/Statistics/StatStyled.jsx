@@ -2,7 +2,7 @@ import { styled } from 'styled-components';
 
 export const Container = styled.section`
   width: 600px;
-  height: 300px;
+  max-height: 300px;
   border: 2px blue solid;
   display: flex;
   flex-direction: column;
@@ -25,7 +25,7 @@ export const List = styled.ul`
   border-top: 3px solid blue;
   display: flex;
   justify-content: space-between;
-  background-color: #8899bb;
+  background-color: #708abd;
 `;
 
 export const StatLi = styled.li`

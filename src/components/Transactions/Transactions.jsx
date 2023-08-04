@@ -35,7 +35,7 @@ export function Transactions({ data }) {
 }
 
 Transactions.propTypes = {
-  items: PropTypes.arrayOf(
+  data: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       type: PropTypes.string.isRequired,

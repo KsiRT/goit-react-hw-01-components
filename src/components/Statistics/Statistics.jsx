@@ -5,7 +5,7 @@ import { Container, List, StatLi, Title } from './StatStyled';
 export function Statistics({ data, title }) {
   return (
     <Container>
-      <Title>{title}</Title>
+      {title && <Title>{title}</Title>}
 
       <List>
         {data.map(object => {
